@@ -1,3 +1,10 @@
+<html>
+
+<head>
+<title>home</title>
+</head>
+
+<body>
 
 <html>
 <head>
@@ -12,7 +19,7 @@
 	padding:0px;
 }
 #page{
-	height:1500px;
+	height:1800px;
 	width:1500px;
 	background-color:skyblue;
 	
@@ -28,6 +35,7 @@
 	height:60px;
 	width:850px;
 	background-color:orange;
+	line-height:60px;
 	float:left;
 	
 	}
@@ -94,44 +102,6 @@ background-color:red;
 #head1{
 	line-height:60px;
 }
-#image{
-	height:400px;
-	width:1500px;
-	background-color:yellow;
-}
-
-	#slide1{	
-		height:399px;
-		width:373px;
-		float:left;
-		background-image:url('images.jpg');
-		background-repeat : no-repeat;
-	}
-	#slide2{
-		
-		height:399px;
-		width:373px;
-		background-image:url('pc.jpg');
-		background-repeat : no-repeat;
-		float:left;
-		
-	}
-	#slide3{
-		
-		height:399px;
-		width:373px;
-		background-image:url('pollution.jpg');
-		background-repeat : no-repeat;
-		float:left;
-	}
-	#slide4{
-		
-		height:399px;
-		width:373px;
-		background-image:url('save nature.jpg');
-		background-repeat : no-repeat;
-		float:left;
-	}
 
 #projects{
 	
@@ -146,7 +116,7 @@ background-color:red;
 	height:300px;
 	width:350px;
 	background-color:orange;
-	
+	line-height:300px;
 	float:left;
 }
 
@@ -231,10 +201,19 @@ background-color:red;
 	
 	}	
 #footer5{
-	height:20px;
+	height:50px;
 	width:1500px;
 	background-color:grey;
+	line-height:50px;
+	
 }	
+#slidder{
+
+	height:650px;
+	width:1500px;
+
+}
+.mySlides {display:none}
 </style>
 </head>
 <body>
@@ -245,7 +224,7 @@ background-color:red;
 			</marquee></center></div>
 			<div id=head2>
 				<ul>
-					<li><h4><a href='home.html'>HOME</a></h4></li>
+					<li><strong><a href='home.html'>HOME</a></strong></li>
 					<li></h4><a href='contact.html'><b>CONTACT US</b></a></h4></li> 
 			
 				</ul>
@@ -289,35 +268,84 @@ background-color:red;
 						<li><a href=''>video clips</a></li>
 					</ul>
 				</li>
-				<li><a href=''>Search</a></li>
-				<li><a href=''>Events/Activities</a></li>
+				<li><a href='https://www.google.com/search?q=search&rlz=1C1CHZL_enIN817IN817&oq=se&aqs=chrome.1.69i60j69i59j69i57j69i59j69i60l2.3091j0j7&sourceid=chrome&ie=UTF-8'>Search</a></li>
+				<li><a href='https://www.smilefoundationindia.org/events_&_activities_me.html'>Events/Activities</a></li>
 			</ul>
 		</div>
-<div id=image>		
-	
-		<div id=slide1>	</div>
-		<div id=slide2></div>
-		<div id=slide3></div>
-		<div id=slide4></div>
+
+<div id=slidder>
+<div class="w3-container">
+  <center><h2>NGO WORKS</h2></center>
+</div>
+
+<div class="w3-content" style="max-width:800px">
+  <img class="mySlides" src="pc.jpg" style="width:100%">
+  <img class="mySlides" src="images.jpg" style="width:118%">
+  <img class="mySlides" src="save nature.jpg" style="width:100%">
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">Prev</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next</button>
+  </div>
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+</script>
 
 	
 </div>
-				<div id=projects >
+				<div id=projects>
 					
 					<div id=projects1>
-					<h1>OUR PROJECTS</h1>
+					<h1><center>OUR PROJECTS</center></h1>
 					</div>
 					
 					<div id=projects2>
-					<h1>PROJECTS1</h1>
+					<video width="350" height="300" controls="controls" autoplay="autoplay" loop='1' ></video>
+					<source src="E:\moveis\kick.avi" type="video/mp4">
 					</div>
 					
 					<div id=projects3>
-					<h1> PROJECT2</h1>
+					
+					<video width="350" height="300" controls="controls" autoplay="autoplay" loop='1' ></video>
+					<source src="E:\moveis\kick.avi" type="video/mp4">
 					</div>
 					
 					<div id=projects4>
-					<h1>PROJECT3</h1>
+					
+					<video width="350" height="300" controls="controls" autoplay="autoplay" loop='1' ></video>
+					<source src="E:\moveis\kick.avi" type="video/mp4">
 					</div>
 				</div>
 			
@@ -333,6 +361,12 @@ background-color:red;
 					</div>
 					
 					<div id=about2>
+					<h3>MEDIA
+						The students, teachers and guardians of Ramrati Education
+						Complex organized an event in solidarity with Hillary
+							Clinton’s aspirations to get succeeded in Presidential
+							Elections – 2019 of
+					</h3>
 					</div>
 					
 					<div id=about3>
@@ -350,8 +384,8 @@ background-color:red;
 		<div id=footer3>
 		<p>
 		<ul><h1>Importants links</h1>
-			<h3><li><a href=>videos</a></li></h3>
-			<h3><li><a href=>links</a></li></h3>
+			<h3><li><a href="https://www.youtube.com/watch?v=JBciLCpqLcQ">videos</a></li></h3>
+			<h3><li><a href="https://www.youtube.com/results?search_query=php+based+project">links</a></li></h3>
 		</ul>
 		</p>
 		</div>		
@@ -364,11 +398,14 @@ background-color:red;
 		</ul>
 		</p>
 		</div>		
-	</div>		
-	
+			
+	</div>
 	<div id=footer5>
 		<center><h4>EMAIL-ID=RITESHGUPTA@GMAIL.COM</h4></center>
-	</div>		
+	</div>	
+	
 </div>
+</body>
+</html>
 </body>
 </html>
